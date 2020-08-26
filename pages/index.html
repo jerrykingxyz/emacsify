@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css"  rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+<template id="topBarTemplate">
+    <div class="topBar">
+        <div class="title">emacsify setting</div>
+        <input placeholder="search"/>
+    </div>
+</template>
+<template id="settingCardTemplate">
+    <div class="card">
+        <div class="cardTitle">
+            <img class="image"/>
+            <span class="title"></span>
+        </div>
+        <div class="cardContainer">
+        </div>
+    </div>
+</template>
+<template id="ruleSettingTemplate">
+    <div class="ruleContainer">
+        <input />
+        <input />
+        <img src="./img/delete_forever.svg">
+    </div>
+</template>
+<top-bar></top-bar>
+<div class="container">
+    <setting-card image="./img/keyboard.svg" title="Key Bindings">
+        <rule-setting></rule-setting>
+        <rule-setting></rule-setting>
+        <rule-setting></rule-setting>
+        <div id="createRule">
+            <img src="./img/add.svg">
+            <span class="text">create</span>
+        </div>
+    </setting-card>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>
