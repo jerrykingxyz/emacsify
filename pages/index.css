@@ -12,6 +12,12 @@ input {
   border: 0;
   background: #202124;
   color: #E8EAED;
+  border-radius:5px
+
+}
+input:focus {
+  outline: none;
+  border: #0C5FF5 solid 1px;
 }
 
 .container {
@@ -19,58 +25,30 @@ input {
   margin: 0 auto;
 }
 
-.topBar {
-  height: 40px;
-  width: 100%;
-  background: #292A2D;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  padding: 8px 20px;
-}
-.topBar > .title{
-  color:rgba(232,234,237,1);
-  float: left;
-  line-height: 48px;
-}
-.topBar > input {
-  height: 100%;
-  width: 500px;
-  background: url("img/search.svg") 10px center no-repeat;
-  padding-left: 40px;
-}
-
-.card {
-  padding: 10px;
-}
-.cardTitle{
-  margin: 10px 0;
-}
-.cardTitle > .title {
-  color: rgba(232,234,237,1);
-  vertical-align: super;
-  margin-left: 10px;
-}
-.cardContainer {
-  background: #292A2D;
-  padding: 0 20px;
-}
-
-.ruleContainer {
-  display: flex;
-  justify-content: space-between;
-  border: solid #979797;
-  border-width: 0 0 1px 0;
-  margin: 0 -20px;
-  padding: 10px;
-}
 #createRule > .text {
   color: #0C5FF5;
   vertical-align: super;
 }
-.ruleContainer > input {
-  border-radius:5px
+
+.config {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 10px;
+  color: #FFFFFF;
 }
-.ruleContainer > input:focus {
-  outline: none;
-  border: #0C5FF5 solid 1px;
+.config.import{
+  border: solid #979797;
+  border-width: 0 0 1px 0;
 }
+.config > button {
+  background: #292A2D;
+  border-radius: 5px;
+  color: #356DF2;
+  padding: 8px;
+  border: 1px solid #5F6368;
+}
+.config > button:hover {
+  background: #5F6368;
+}
+

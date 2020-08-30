@@ -6,29 +6,6 @@
     <link type="text/css"  rel="stylesheet" href="./index.css"/>
 </head>
 <body>
-<template id="topBarTemplate">
-    <div class="topBar">
-        <div class="title">emacsify setting</div>
-        <input placeholder="search"/>
-    </div>
-</template>
-<template id="settingCardTemplate">
-    <div class="card">
-        <div class="cardTitle">
-            <img class="image"/>
-            <span class="title"></span>
-        </div>
-        <div class="cardContainer">
-        </div>
-    </div>
-</template>
-<template id="ruleSettingTemplate">
-    <div class="ruleContainer">
-        <input />
-        <input />
-        <img src="./img/delete_forever.svg">
-    </div>
-</template>
 <top-bar></top-bar>
 <div class="container">
     <setting-card image="./img/keyboard.svg" title="Key Bindings">
@@ -40,7 +17,21 @@
             <span class="text">create</span>
         </div>
     </setting-card>
+    <setting-card isFlex="true" image="./img/view_module.svg" title="Code Module">
+        <code-module></code-module>
+        <code-module></code-module>
+    </setting-card>
+    <setting-card image="./img/import_export.svg" title="Import Export">
+        <div class="config import">
+            <span>Import config file</span>
+            <button>Upload</button>
+        </div>
+        <div class="config">
+            <span>export config file</span>
+            <button>Download</button>
+        </div>
+    </setting-card>
 </div>
 </body>
-<script src="./index.js"></script>
+<script type="module" src="./index.js"></script>
 </html>
