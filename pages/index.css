@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background: #202124;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+input {
+  border: 0;
+  background: #202124;
+  color: #E8EAED;
+  border-radius:5px
+
+}
+input:focus {
+  outline: none;
+  border: #0C5FF5 solid 1px;
+}
+
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+#createRule > .text {
+  color: #0C5FF5;
+  vertical-align: super;
+}
+
+.config {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 10px;
+  color: #FFFFFF;
+}
+.config.import{
+  border: solid #979797;
+  border-width: 0 0 1px 0;
+}
+.config > button {
+  background: #292A2D;
+  border-radius: 5px;
+  color: #356DF2;
+  padding: 8px;
+  border: 1px solid #5F6368;
+}
+.config > button:hover {
+  background: #5F6368;
+}
+
