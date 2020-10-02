@@ -18,10 +18,10 @@
     "open_in_tab": true
   },
   "permissions": [
+    "storage",
     "tabs",
     "clipboardRead",
     "clipboardWrite",
-    "storage",
     "sessions",
     "notifications",
     "webNavigation",
