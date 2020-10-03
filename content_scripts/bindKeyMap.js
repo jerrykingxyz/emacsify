@@ -20,6 +20,7 @@ export default function bindKeyMap(globalMap) {
 
     const fn = scopeMap[keyStr];
     if (typeof fn === "function") {
+      // TODO fn(obj)
       fn();
       scopeMap = null;
       return;

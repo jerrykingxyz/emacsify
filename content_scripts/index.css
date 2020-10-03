@@ -1,0 +1,13 @@
+.emacsify-tipbar {
+  position: fixed;
+  background: #000;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.emacsify-tipbar.emacsify-visible {
+  pointer-events: auto;
+  opacity: 1;
+}
