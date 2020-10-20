@@ -1,14 +1,20 @@
-const template =
-  `<style type="text/css">
+import BaseHTMLElement,{html} from '../BaseHTMLElement/index.js'
+
+let template = html`<style type="text/css">
       .card {
   padding: 10px;
 }
 .cardTitle{
   margin: 10px 0;
 }
+.cardTitle > * {
+  vertical-align: middle;
+}
+.cardTitle > icon-svg{
+  font-size: 24px;
+}
 .cardTitle > .title {
   color: rgba(232,234,237,1);
-  vertical-align: super;
   margin-left: 10px;
 }
 .cardContainer {
@@ -20,24 +26,16 @@ const template =
     </style>
     <div class="card">
         <div class="cardTitle">
-            <img class="image"/>
-            <span class="title"></span>
+            <icon-svg href="${x => x.getAttribute("href")}"></icon-svg>
+            <span class="title">${x => x.title}</span>
         </div>
-        <div class="cardContainer">
+        <div class="cardContainer" style="display: ${x => x.getAttribute("isFlex") ? "flex" : "block"}" >
+            ${x => x.innerHTML}
         </div>
     </div>`
 
-export default class SettingCard extends HTMLElement {
+export default class SettingCard extends BaseHTMLElement {
   constructor() {
-    super();
-    const cardContainerHtml = this.innerHTML
-    this.innerHTML = template
-    const cardContainer = this.querySelector('.cardContainer')
-    cardContainer.innerHTML = cardContainerHtml
-    this.querySelector('img').setAttribute('src', this.getAttribute('image'));
-    this.querySelector('.cardTitle .title').innerText = this.getAttribute('title');
-    if(this.getAttribute("isFlex")){
-      cardContainer.setAttribute("style","display:flex")
-    }
+    super(template);
   }
 }
