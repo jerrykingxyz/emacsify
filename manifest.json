@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "emacsify",
   "version": "0.0.1",
   "description": "",
@@ -7,12 +7,8 @@
     "128": "icons/emacs.png"
   },
   "minimum_chrome_version": "69.0",
-  "background": {
-    "page": "background_scripts/index.html"
-  },
   "options_ui": {
     "page": "pages/index.html",
-    "chrome_style": false,
     "open_in_tab": true
   },
   "permissions": [
@@ -22,9 +18,9 @@
     "clipboardWrite",
     "sessions",
     "notifications",
-    "webNavigation",
-    "<all_urls>"
+    "webNavigation"
   ],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -35,9 +31,10 @@
       "match_about_blank": true
     }
   ],
-  "browser_action": {
-    "default_icon": "icons/emacs.png",
-    "default_popup": "pages/options.html"
-  },
-  "web_accessible_resources": []
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["content_scripts/*"]
+    }
+  ]
 }
